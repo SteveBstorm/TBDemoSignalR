@@ -40,7 +40,8 @@ namespace DemoSignalR.Hubs
 
         public async Task SendToGroup(Message message, string groupname)
         {
-            await Clients.Group(groupname).SendAsync("togroup", message);
+            await Clients.Group(groupname).SendAsync("to"+groupname, message);
+            _groupManager.AddMessageToGroup(message, groupname);
         }
     }
 }
