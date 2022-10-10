@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<MessageManager>();
+builder.Services.AddSingleton<GroupManager>();
 
 builder.Services.AddSignalR();
 
